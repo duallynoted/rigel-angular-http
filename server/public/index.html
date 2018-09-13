@@ -8,13 +8,16 @@
     <script src="scripts/client.js"></script>
     <link rel="stylesheet" href="styles/bootstrap.min.css">
     <link rel="stylesheet" href="styles/style.css">
-    <title>Document</title>
+    <title>Angular HTTP</title>
 </head>
 <body ng-app="ShellApp">
     <h1>Angular HTTP</h1>
     <div ng-controller="ShellController as vm">
     <input type="text" ng-model="vm.message"/>
-    {{vm.message}} <i>{{vm.number}}</i>
+    {{vm.message}} <a target="_blank" href="http://google.com">{{vm.number}}</a>
+    <ul>
+        <li ng-repeat="shell in vm.shells">{{shell.type}}  {{shell.color}}</li>
+    </ul>
 </div>
 </body>
 </html>
